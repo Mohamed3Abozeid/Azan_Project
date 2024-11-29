@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azan Timing</title>
+    <link rel="shortcut icon" href="./imges/images.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Comfortaa:wght@300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+
+
+    <main>
+        <header>
+
+            <div class="container">
+
+
+                <div class="head  py-3 mt-3  fs-3 fw-bolder ">
+                    <div class="">
+                        <select name="egypt-governorates" id="egypt-governorates">
+                            <option value="cairo">القاهرة</option>
+                            <option value="alexandria">الإسكندرية</option>
+                            <option value="asyut">أسيوط</option>
+                            <option value="aswan">أسوان</option>
+                            <option value="beheira">البحيرة</option>
+                            <option value="beni-suef">بني سويف</option>
+                            <option value="dakahlia">الدقهلية</option>
+                            <option value="domietta">دمياط</option>
+                            <option value="faiyum">الفيوم</option>
+                            <option value="algharbia">الغربية</option>
+                            <option value="giza">الجيزة</option>
+                            <option value="ismailia">الإسماعيلية</option>
+                            <option value="kafr-el-sheikh">كفر الشيخ</option>
+                            <option value="luxor">الأقصر</option>
+                            <option value="matruh">مطروح</option>
+                            <option value="minya">المنيا</option>
+                            <option value="monufia">المنوفية</option>
+                            <option value="new-valley">الوادي الجديد</option>
+                            <option value="north-sinai">شمال سيناء</option>
+                            <option value="port-said">بورسعيد</option>
+                            <option value="qalyubia">القليوبية</option>
+                            <option value="qena">قنا</option>
+                            <option value="red-sea">البحر الأحمر</option>
+                            <option value="al-sharqia">الشرقية</option>
+                            <option value="sohag">سوهاج</option>
+                            <option value="south-sinai">جنوب سيناء</option>
+                            <option value="suez">السويس</option>
+                        </select>
+
+
+                    </div>
+                    <div id="moonDate" class=" fs-3">
+                        <span id="day"></span>
+                        <span id="dayNumber"></span>
+                        <span id="moonName"></span>
+                        <span id="yearNumber"></span>
+                    </div>
+                </div>
+
+                <!-- !Next pray -->
+                <p class="text-center my-3 fs-3">باقي علي الصلاه القادمه </p>
+                <div class="NextPrayItem text-center my-3">
+
+                    <span class="card d-inline p-2 mx-1 fs-2 " id="SecondLate">00</span>
+                    :
+                    <span class="card d-inline p-2 mx-1 fs-2" id="MiunsLate">00</span>:
+                    <span class="card d-inline p-2 mx-1 fs-2" id="HoursLate">00</span>
+                </div>
+
+
+                <div class="timeDate d-flex justify-content-between align-items-center  fs-3 py-3">
+                    <div class="timeWathch">
+                        <i class="fa-regular fa-clock "></i>
+                        <span id="timeItem"></span>
+                    </div>
+                    <span id="DateItem"></span>
+                </div>
+                <!-- *start cards -->
+
+                <div class="row gy-2 text-center align-items-end">
+
+                    <!-- !start card  -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 ">
+                        <div class="card  mb-3 border border-1 border-dark">
+                            <div class="card-header bg-danger text-light">الفجر</div>
+                            <div class="card-body">
+                                <p class="card-text fs-1 fw-bolder" id="fagr">00:00 <span>صباحا</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- !end card -->
+                    <!-- !start card  -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 ">
+                        <div class="card  mb-3 border border-1 border-dark">
+                            <div class="card-header bg-danger text-light">الشروق</div>
+                            <div class="card-body">
+                                <p class="card-text fs-1 fw-bolder" id="sobh">00:00 <span>صباحا</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- !end card -->
+                    <!-- !start card  -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 ">
+                        <div class="card  mb-3 border border-1 border-dark">
+                            <div class="card-header bg-danger text-light ">الظهر</div>
+                            <div class="card-body">
+                                <p class="card-text fs-1 fw-bolder" id="dhur">00:00 <span>صباحا</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- !end card -->
+
+                    <!-- !start card  -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 ">
+                        <div class="card  mb-3 border border-1 border-dark">
+                            <div class="card-header bg-danger
+                             text-light">العصر</div>
+                            <div class="card-body">
+                                <p class="card-text fs-1 fw-bolder" id="asr">00:00 <span>صباحا</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- !end card -->
+                    <!-- !start card  -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 ">
+                        <div class="card  mb-3 border border-1 border-dark">
+                            <div class="card-header bg-danger text-light">المغرب</div>
+                            <div class="card-body">
+                                <p class="card-text fs-1 fw-bolder" id="makrb">00:00 <span>صباحا</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- !end card -->
+                    <!-- !start card  -->
+                    <div class="col-lg-2 col-md-4 col-sm-6 ">
+                        <div class="card  mb-3 border border-1 border-dark">
+                            <div class="card-header bg-danger text-light">العشاء</div>
+                            <div class="card-body">
+                                <p class="card-text fs-1 fw-bolder" id="esha">00:00 <span>صباحا</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- !end card -->
+
+                </div>
+
+                <!-- *End Cards -->
+            </div>
+            <footer class="w-100 ">
+                <div class="container">
+                    <P>By:Mohamed Abozeid</P>
+                </div>
+            </footer>
+        </header>
+    </main>
+
+
+
+    <div class="d-none justify-content-center align-items-center " id="lightBox">
+        <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
